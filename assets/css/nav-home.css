@@ -1,0 +1,62 @@
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right bottom, gold, chocolate);
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+nav ul li {
+	font-size: 40px;
+	font-family: sans-serif;
+	background-color: white;
+	border: 2px solid black;
+	letter-spacing: 0.1em;
+	width: 5em;
+	height: 1.5em;
+	line-height: 1.5em;
+	position: relative;
+	overflow: hidden;
+	margin: 0.5em;
+	cursor: pointer;
+}
+
+nav ul li a {
+	color: white;
+	mix-blend-mode: difference;
+}
+
+nav ul li::before {
+	content: '';
+	position: absolute;
+	width: 1.5em;
+	height: inherit;
+	background-color: black;
+	border-radius: 50%;
+	top: 0;
+	left: -0.75em;
+	transition: 0.5s ease-out;
+}
+
+nav ul li:hover::before {
+	transform: scale(7);
+}
+
+.nav-link {
+    text-decoration:none;                      /* 링크가 가지는 기본 꾸밈 효과(밑줄 등)을 없앰 */                            
+    display: block;                            /* 링크를 글씨가 있는 부분 뿐만 아니라 전체 영역을 클릭해도 링크가 걸리게 설정 */
+    /* width: 150px;                               메뉴 링크의 넓이 설정 
+    font-size: 12px;                          */
+    /* font-weight: bold;                        
+    font-family: "Trebuchet MS", Dotum, Arial; */
+
+    /* text-align: center;
+    text-decoration: none;
+    color: azure; */
+}
